@@ -481,7 +481,117 @@ ul {
     transform: translateX(4px);
 }
 
-/* 9. SECCIÓN SOBRE MÍ (ESTRUCTURA DE DOS COLUMNAS)
+/* 9. SECCIÓN PORTAFOLIO DE PROYECTOS (ESTILO CORPORATIVO CREATIVADESIGN)
+   ========================================================================== */
+.projects {
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-slate-200);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.project-card {
+    background-color: var(--color-white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+/* Efecto hover: Elevación sutil con box-shadow */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+    border-color: #cbd5e1;
+}
+
+/* Contenedor de imagen e imagen con altura fija de 200px y zoom suave */
+.project-image-box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--color-slate-100);
+}
+
+.project-card img,
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Zoom suave (scale) en la imagen al pasar el mouse */
+.project-card:hover img,
+.project-card:hover .project-img {
+    transform: scale(1.06);
+}
+
+.project-content {
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Badge superior con fondo azul suave (#eff6ff) y texto azul (#2563eb) */
+.project-tag {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.project-title {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: var(--color-slate-900);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.project-description {
+    font-size: 0.92rem;
+    color: var(--color-slate-600);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-blue-primary);
+    padding-top: 14px;
+    border-top: 1px solid var(--color-slate-100);
+    transition: var(--transition-fast);
+}
+
+.project-link:hover {
+    color: var(--color-blue-hover);
+    transform: translateX(4px);
+}
+
+/* 10. SECCIÓN SOBRE MÍ (ESTRUCTURA DE DOS COLUMNAS)
    ========================================================================== */
 .about {
     background-color: var(--color-white);
@@ -605,7 +715,7 @@ ul {
     align-self: flex-start;
 }
 
-/* 10. PIE DE PÁGINA (FOOTER CORPORATIVO)
+/* 11. PIE DE PÁGINA (FOOTER CORPORATIVO)
    ========================================================================== */
 .footer {
     background-color: var(--color-slate-950);
@@ -671,12 +781,17 @@ ul {
     color: var(--color-slate-500);
 }
 
-/* 11. RESPONSIVIDAD Y MEDIA QUERIES
+/* 12. RESPONSIVIDAD Y MEDIA QUERIES
    ========================================================================== */
 
 /* Tablets Grandes / Laptops (<= 1024px) */
 @media (max-width: 1024px) {
     .services-grid {
+        gap: 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 24px;
     }
 
@@ -774,6 +889,10 @@ ul {
 
     .section {
         padding: 64px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .about-highlights {
