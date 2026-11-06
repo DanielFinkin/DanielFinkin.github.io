@@ -608,124 +608,77 @@ ul {
     transform: translateX(4px);
 }
 
-/* 10. SECCIÓN SOBRE MÍ (ESTRUCTURA DE DOS COLUMNAS)
+/* 10. SECCIÓN SOBRE MÍ (DISEÑO TIPOGRÁFICO INSTITUCIONAL DE AGENCIA)
    ========================================================================== */
 .about {
     background-color: var(--color-white);
     border-top: 1px solid var(--color-slate-200);
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 64px;
-    align-items: center;
-}
-
-/* Columna Multimedia (Foto de perfil) */
-.about-media {
-    position: relative;
-}
-
-.about-figure {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.18);
-    background-color: var(--color-slate-800);
-}
-
-.about-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 4 / 5;
-    border-radius: 20px;
-    transition: var(--transition-smooth);
-}
-
-.about-figure:hover .about-image {
-    transform: scale(1.02);
-}
-
-.about-badge {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(10px);
-    color: var(--color-white);
-    padding: 14px 20px;
-    border-radius: 12px;
-    font-size: 0.88rem;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.about-badge strong {
-    color: #60a5fa;
-}
-
-/* Columna Contenido */
 .about-content {
+    max-width: 920px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
 .about-content .section-subtitle {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .about-content .section-title {
     text-align: left;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+    font-size: clamp(2.1rem, 3.4vw, 2.75rem);
+    letter-spacing: -0.025em;
+    line-height: 1.22;
 }
 
 .about-bio {
-    margin-bottom: 28px;
+    margin-bottom: 40px;
 }
 
 .about-bio p {
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     color: var(--color-slate-600);
-    line-height: 1.75;
-    margin-bottom: 18px;
+    line-height: 1.8;
+    margin-bottom: 22px;
 }
 
 .about-bio strong {
     color: var(--color-slate-900);
+    font-weight: 700;
 }
 
-/* Mini tarjetas de valor diferencial */
+/* Tarjetas de valor diferencial en 3 columnas */
 .about-highlights {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-bottom: 36px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 44px;
 }
 
 .highlight-item {
     background-color: var(--color-slate-50);
     border-left: 3px solid var(--color-blue-primary);
     border-radius: 0 10px 10px 0;
-    padding: 16px 20px;
+    padding: 20px 22px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
 .highlight-title {
     display: block;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.96rem;
     color: var(--color-slate-900);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .highlight-desc {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--color-slate-500);
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
 .about-cta {
@@ -812,10 +765,6 @@ ul {
         gap: 24px;
     }
 
-    .about-grid {
-        gap: 40px;
-    }
-
     .hero {
         padding: 90px 0 80px;
     }
@@ -830,14 +779,9 @@ ul {
         margin-right: auto;
     }
 
-    .about-grid {
+    .about-highlights {
         grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .about-media {
-        max-width: 480px;
-        margin: 0 auto;
+        gap: 16px;
     }
 
     .footer-top {
