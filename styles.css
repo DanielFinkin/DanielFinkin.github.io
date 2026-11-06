@@ -505,34 +505,51 @@ ul {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
-/* Efecto hover: Elevación sutil con box-shadow */
+/* Efecto hover: Elevación sutil con box-shadow que invita al clic */
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
     border-color: #cbd5e1;
 }
 
-/* Contenedor de imagen e imagen con altura fija de 200px y zoom suave */
+/* Contenedor de logotipos (.project-img-wrapper):
+   - Fondo claro neutro (#f8fafc)
+   - Alto fijo de 150px
+   - Bordes redondeados superiores
+   - Centrado perfecto con Flexbox */
+.project-img-wrapper,
 .project-image-box {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 150px;
+    background-color: #f8fafc;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    background-color: var(--color-slate-100);
 }
 
-.project-card img,
-.project-img {
+/* Configuración de logotipos (img):
+   - Padding interno de 25px
+   - max-width / max-height al 100%
+   - object-fit: contain para evitar deformaciones y pixelado */
+.project-img-wrapper img,
+.project-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 25px;
+    object-fit: contain;
     display: block;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Zoom suave (scale) en la imagen al pasar el mouse */
-.project-card:hover img,
-.project-card:hover .project-img {
+/* Zoom suave (scale) en el logo al pasar el mouse */
+.project-card:hover .project-img-wrapper img,
+.project-card:hover img {
     transform: scale(1.06);
 }
 
