@@ -541,20 +541,20 @@ ul {
 /* Contenedor del mockup */
 .project-mockup-wrapper {
     width: 100%;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 10px;
 }
 
 /* Imágenes de mockups multi-dispositivo */
 .project-mockup-wrapper img {
     width: 100%;
-    height: auto;
-    max-height: 250px;
+    height: 220px;
     object-fit: contain;
     display: block;
+    margin: 0 auto;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28));
 }
@@ -859,6 +859,12 @@ ul {
 
     .project-card {
         padding: 24px 20px;
+    }
+
+    .project-mockup-wrapper,
+    .project-mockup-wrapper img {
+        height: auto;
+        max-height: 200px;
     }
 
     .project-btn {
