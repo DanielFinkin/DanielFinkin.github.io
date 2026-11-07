@@ -187,13 +187,25 @@ ul {
     height: 80px;
 }
 
-/* Logotipo */
-.logo {
-    font-size: 1.35rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: var(--color-slate-900);
-    text-transform: uppercase;
+/* Logotipo y Marca en Navegación */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-link img {
+    height: 32px;
+    width: auto;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.logo-link span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 /* Navegación Principal */
