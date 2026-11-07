@@ -513,29 +513,29 @@ ul {
     box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.28), 0 12px 18px -6px rgba(0, 0, 0, 0.18);
 }
 
-/* Colores de fondo sólidos y elegantes por marca */
+/* Colores de fondo sólidos y elegantes por marca (tonos maduros y desaturados) */
 .card-nexo {
-    background-color: #111827; /* Gris pizarra muy oscuro */
+    background-color: #1f242e; /* Gris azulado muy oscuro y elegante */
 }
 
 .card-ventas {
-    background-color: #2e1065; /* Morado profundo */
+    background-color: #251b33; /* Morado berenjena opaco y sutil */
 }
 
 .card-capeco {
-    background-color: #1e3a8a; /* Azul marino corporativo */
+    background-color: #1c263b; /* Azul noche corporativo opaco */
 }
 
 .card-vitain {
-    background-color: #0f172a; /* Azul noche oscuro */
+    background-color: #1b2230; /* Azul pizarra profundo apagado */
 }
 
 .card-deudas {
-    background-color: #064e3b; /* Verde esmeralda */
+    background-color: #182924; /* Verde bosque opaco y oscuro */
 }
 
 .card-hackman {
-    background-color: #7c2d12; /* Marrón terracota */
+    background-color: #301f1a; /* Marrón tierra quemada / chocolate oscuro */
 }
 
 /* Contenedor del mockup */
@@ -564,20 +564,31 @@ ul {
     transform: scale(1.03);
 }
 
-/* Título de proyecto completo y estético (sin recorte ni puntos suspensivos) */
-.project-title {
+/* Pastilla / contenedor estilizado para el nombre de la marca */
+.project-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    max-width: 90%;
+}
+
+.project-name {
     color: #ffffff;
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    font-weight: 500;
     text-align: center;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin: 0;
+    line-height: 1.4;
     letter-spacing: -0.01em;
-    line-height: 1.35;
     white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-    word-break: normal;
 }
 
 /* Botón fijado milimétricamente al fondo usando margin-top: auto */
@@ -587,25 +598,26 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    color: #ffffff;
-    font-size: 0.92rem;
-    font-weight: 600;
-    padding: 10px 22px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 8px 20px;
     border-radius: 9999px;
-    background-color: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     text-decoration: none;
     transition: all 0.25s ease;
     align-self: center;
 }
 
 .project-btn:hover {
-    background-color: #ffffff;
-    color: var(--color-slate-900);
-    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.28);
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* 10. SECCIÓN SOBRE MÍ (DISEÑO TIPOGRÁFICO INSTITUCIONAL DE AGENCIA)
